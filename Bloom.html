@@ -1,0 +1,40 @@
+<html>
+  <title>Codestar.com- Learn to code</title>
+  <link rel="stylesheet" href="style1.css">
+  <link href="fontawesome/css/all.css" rel="stylesheet" type="text/css">
+  <body>
+  <!--<div class="toggle" onclick="show()">-->
+  <!--  <span></span>-->
+  <!--  <span></span>-->
+  <!--  <span></span>-->
+  <!--</div>-->
+  <i class="fa fa-bars" id="bars"></i>
+  <div id="sidebar">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <header><label class="logo">Bloom</label></header>
+    <div class="login">
+      <h2>Login</h2>
+      <label for="email" class="email">Email/Phone No.</label><br>
+      <input type="text" id="email">
+      <label for="password" class="password">Password</label><br>
+      <input type="password" id="password"><br>
+      <button class="login">Login</button><br>
+      <label class="forgot">Forgot Password?</label><br><br><br>
+      <label class="acct">Don't have an account? <br><br> Sign up with</label><br>
+      <button class="Facebook">Facebook</button><br>
+      <button class="Google">Google</button><br>
+      <button class="twitter">Twitter</button><br>
+    </div>
+    </body>
+    <script>
+      function show() {
+        document.getElementById('sidebar').classList.toggle('active');    
+        }
+    </script>
+</html>
