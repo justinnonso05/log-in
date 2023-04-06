@@ -12,12 +12,7 @@ div.toggle span{
   display: block;
   margin-top: 4px;
   border-radius: 3px;
-  
-}
-#bars {
-  color: white;
-  font-size: 30px;
-}
+} 
 div.toggle {
   float: right;
   margin-right: 10px;
