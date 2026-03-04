@@ -1,0 +1,28 @@
+name: Kagura Tests
+
+on:
+  pull_request:
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  kagura:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Kagura tests
+        uses: Camie-Tech/kagura-action@v1
+        with:
+          api-key: ${{ secrets.KAGURA_API_KEY }}
+          kagura-api-url: ${{ secrets.KAGURA_API_URL }}
+          test-ids: "7ad08726-9c57-49f5-aa52-5dbe660ae7a1"
+          target-url: "https://duespay.app/auth"
+          webhook-url: "http://localhost:3001/kagura-webhook"
+          metadata: '{"commit": "${{ github.sha }}", "branch": "${{ github.ref_name }}"}'
+          wait-for-results: true
+        env:
+          # Use GitHub's built-in ephemeral token first
+          KAGURA_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
