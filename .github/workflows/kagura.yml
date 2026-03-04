@@ -20,9 +20,6 @@ jobs:
           kagura-api-url: ${{ secrets.KAGURA_API_URL }}
           test-ids: "7ad08726-9c57-49f5-aa52-5dbe660ae7a1"
           target-url: "https://duespay.app/auth"
-          webhook-url: "http://localhost:3001/kagura-webhook"
-          metadata: '{"commit": "${{ github.sha }}", "branch": "${{ github.ref_name }}"}'
           wait-for-results: true
         env:
-          # Use GitHub's built-in ephemeral token first
           KAGURA_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
